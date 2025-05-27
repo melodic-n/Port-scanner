@@ -2,6 +2,9 @@
 
 A simple command-line port scanner written in C for educational and cybersecurity practice purposes. It allows you to scan a specific port or all common ports on a target IP address to identify open services.
 
+\
+This project was made in a Linux environement.
+
 ## 🚀 Features
 
 - Scan a specific port on a given IP address
