@@ -12,7 +12,7 @@ void scanall(in_addr_t ip){
     int p ,sock ,result;
 
     
-    for (p=1;p <= 1023;p++){
+    for (p=1;p <= 10000;p++){
        sock = socket(AF_INET,SOCK_STREAM,0);
        
        srv.sin_family = AF_INET;
