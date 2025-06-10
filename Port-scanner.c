@@ -10,8 +10,18 @@ void scanall(in_addr_t ip){
     // struct hostent * hp ; // holds infrmation like host name , alias, ip addresses 
     struct sockaddr_in srv ;
     int p ,sock ,result;
+    char os[40];
 
-    
+    #ifdef __linux__
+        os = "Linux \0";
+    #ifdef __windows__
+        os = "Windows \0";
+    #else 
+        os = " unknown os \0";
+    #endif
+
+    printf("OS of Target machine : %s ",os);
+
     for (p=1;p <= 10000;p++){
        sock = socket(AF_INET,SOCK_STREAM,0);
        
@@ -21,7 +31,7 @@ void scanall(in_addr_t ip){
 
 
        result = connect(sock,(struct sockaddr *) &srv,sizeof(srv));
-
+        
         if (result == 0) 
             printf("Port %d is open \n" , p);
       
