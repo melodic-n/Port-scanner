@@ -8,6 +8,7 @@ This project was made in a Linux environement.
 ## 🚀 Features
 
 - Scan a specific port on a given IP address
+- Detect OS running on the target machine
 - Scan all well-known ports (1–1023)
 - Simple terminal interface
 
